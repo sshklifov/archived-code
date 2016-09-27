@@ -36,7 +36,7 @@ This programme is nothing special. It takes as command like arguments base ten n
 
 3.5 login
 
-It tries to perform what login(1) does. It prompts for a username and password, verifies login credentials, writes to lastlog, umpt and wtmp files, changes uid and the current working directory, sets environemtal variables (e.g. 'HOME', 'USER') and fork-execs the user shell. It uses capabilities for reading and writing to files and, as a security mechanism, disables coredump files. Example usage:
+It performs what login(1) does. It prompts for a username and password, verifies login credentials, writes to lastlog, umpt and wtmp files, changes uid and the current working directory, sets environemtal variables (e.g. 'HOME', 'USER') and fork-execs the user shell. It uses capabilities for reading and writing to files and, as a security mechanism, disables coredump files. Example usage:
 
 sudo setcap "cap_dac_override=p" login
 ./login
