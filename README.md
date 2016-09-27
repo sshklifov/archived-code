@@ -1,18 +1,3 @@
-Table of contents:
-
-1. Introduction
-
-2. html_css
-
-3. POSIX-API
-3.1 inotify_r
-3.2 mem.c
-3.3 time
-3.4 cond_var
-3.5 login
-3.6 popen.c
-
---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 1. Introduction
 
 I have uploaded the notable portion of programmes that I have written. They are divided into 2 categories. The first is 'html_css', where a website can be found. It was the end product of a group project from school. I was the leader and was responsible for designing it. The second section is 'POSIX-API'.
