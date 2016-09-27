@@ -1,0 +1,268 @@
+/* TODO
+Code has a lot of flaw. It could definitely benefit from some improvements: use shorthand properties, resolve
+margin/padding and id/class problems, less "HAX", track inheritance and, as always, adopt better naming conventions. */
+
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, ol, ul, li, form, label, legend, caption, aside, details, figcaption, figure, footer,header, hgroup, menu, nav, section, summary
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+
+html, body
+{
+	width: 100%;
+	height: 100%;
+	min-width: 1100px;
+}
+
+body
+{
+	background-image: url(../images/bg.png); 
+	background-position: left top;
+	background-repeat: repeat;
+}
+
+#wrapper
+{
+	position: relative;
+	width: 100%;
+	min-height: 100%;
+}
+
+#nav_bar
+{
+	position: relative;
+	left: 0;
+	top: 0;
+	height: 45px; /*just in case*/
+	background-color: rgba(0, 0, 0, 0.8);
+	border-bottom: 3px solid #0074D9;
+}
+
+#logo
+{
+	padding-left: 8px;
+	font-family: 'Arizonia', Helvetica, sans-serif;
+	font-size: 33px;
+	font-weight: 600;
+	text-decoration: none;
+	color: #0074D9;
+}
+
+#logo::after
+{
+	content: ".comlu.com";
+	color: #f2f2f2;
+}
+
+#nav_bar ul
+{
+	list-style: none;
+	float: right;
+}
+
+.button 
+{
+	position: relative;
+    display: inline-block;
+	float: left;
+	
+	margin-right: 25px;
+	margin-top: 15px;
+}
+
+.button a
+{
+	font-family: Arial, sans-serif;
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: 600;
+	color: gray;
+}
+
+
+.button > a:hover:not(.active)
+{
+	color: white;
+}
+
+.active a
+{
+	color: white;
+}
+
+.dropdown
+{
+	position: relative;
+	padding-right: 20px;
+	padding-bottom: 4px;
+	margin-right: 15px; /*compensate for image dimensions*/
+}
+
+.dropdown a
+{
+	cursor: default;
+}
+
+.dropdown img
+{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+
+.dropdown_content
+{	
+	display: none;
+	position: absolute;
+	min-width: 130px;
+	background-color: #f0f0f0;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+
+.dropdown:hover .dropdown_content
+{
+    display: block;
+}
+
+.dropdown_content a
+{
+	display: block;
+	padding: 14px 13px;
+	font-family: Arial, sans-serif;
+	text-decoration: none;
+	font-size: 13px;
+	font-weight: 500;
+	color: black;
+	cursor: pointer;
+}
+
+.dropdown_content a:hover
+{
+	background-color: #c0c0c0;
+}
+
+.dropdown:hover > a
+{
+	color: white;
+}
+
+.dropdown:hover img, .active.dropdown img
+{
+	-webkit-filter: brightness(180%); /*fix compatibility*/
+}
+
+#container
+{
+	position: relative; /*logo*/
+	width: 80%;
+	margin: auto;
+	margin-top: 60px;
+	margin-bottom: 55px; /*footer size and spacing*/
+	padding-bottom: 10px;
+	background-color: #fbfbfb;
+	border: 2px solid #8c8c8c;
+	border-radius: 15px;
+}
+
+h1
+{
+	text-align: center;
+	padding-top: 15px;
+	padding-bottom: 30px;
+	padding-right: 5%;
+	font-family: Arial, sans-serif;
+	font-weight: 600;
+	font-size: 25px;
+	color: #1a1a1a;
+}
+
+h2
+{
+	display: block;
+	margin-top: 25px;
+	margin-bottom: 10px;
+	margin-left: 27px; /*border effect*/
+	font-family: Arial, sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	color: #101010;
+	border-bottom: 1px solid #4c4c4c;
+	padding-left: 3px; /*total disposition: 30px*/
+}
+
+h3
+{
+	display: block;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	padding-left: 30px;
+	font-family: Arial, sans-serif;
+	font-size: 17px;
+	font-weight: 600;
+	/*font-style: italic;*/
+	color: #272727;
+}
+
+.h2_numeral
+{
+	padding-right: 3px;
+	font-size: 16px;
+}
+
+.h3_numeral
+{
+	font-weight: 600;
+	padding-right: 3px;
+	font-size: 15px;
+}
+
+p
+{
+	padding-bottom: 6px;
+	padding-left: 30px;
+	padding-right: 30px;
+	font-family: "Times New Roman", serif;
+	font-size: 17px;
+	color: black
+}
+
+#container ul
+{
+	margin-bottom: 6px;
+}
+
+#container ul li
+{
+	margin-bottom: 6px;
+	padding-left: 30px;
+	padding-right: 30px;
+	list-style-position: inside;
+	font-family: "Times New Roman", serif;
+	font-size: 17px;
+	color: black
+}
+
+#wrapper
+{
+	border-bottom: 1px solid rgba(0, 0, 0, 0); /*HAX or bad code?*/
+}
+
+#footer
+{
+	display: block;
+	position: absolute;
+	left: 0;
+	bottom: 10px; /* margin-bottom */
+	width: 100%;
+	font-size: 15px;
+	color: #606060;
+}

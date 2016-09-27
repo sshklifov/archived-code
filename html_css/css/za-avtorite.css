@@ -1,0 +1,26 @@
+table
+{
+	width: 75%;
+	margin: auto;
+	margin-bottom: 25px;
+	border-top: 1px solid gray;
+}
+
+td
+{
+	text-align: center;
+	padding: 12px 8px;
+}
+
+td a
+{
+	font-style: Arial, sans-serif;
+	font-size: 18px;
+	color: #202020;
+	text-decoration: none;
+}
+
+td a:hover
+{
+	color: #0052cc;
+}

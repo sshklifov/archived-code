@@ -1,0 +1,49 @@
+h3
+{
+	clear: both;
+}
+
+p
+{
+	overflow: auto;
+}
+
+.examples
+{
+	display: inline-block;
+	margin-left: 0px;
+	margin-right: 40px;
+	float: left;
+	font-style: italic;
+}
+
+.emphasis
+{
+	font-weight: bold;
+	color: #b30000;
+	text-decoration: underline;
+}
+
+
+.protip
+{
+	/*"inherit" p*/
+	padding-bottom: 6px;
+	padding-right: 30px;
+	font-family: "Times New Roman", serif;
+	font-size: 17px;
+	color: black;
+	/*fix spacing*/
+	margin-left: 97px;
+}
+
+.protip::before
+{
+	margin-left: -68px;
+	margin-right: 10px;
+	content: "Съвет:";
+	color: #303030;
+	font-weight: 600;
+	font-style: italic;
+	text-decoration: underline;
+}

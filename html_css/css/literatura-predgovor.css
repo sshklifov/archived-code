@@ -1,0 +1,36 @@
+/*Thanks to w3schools for the beautiful table, tweaked it a little */
+
+table {
+    border-collapse: collapse;
+    width: 60%;
+	margin-left: 30px;
+	margin-top: 10px;
+	margin-bottom: 15px;
+	border: 2px solid #2f6a31;
+	outline: 2px solid #83c985;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #4CAF50;
+    border-bottom: 1px solid #2a2a2a;
+	color: white;
+}
+
+.conditional
+{
+	font-weight: 600;
+	font-style: italic;
+	color: #002600;
+}
+
+.resume
+{
+	color: black;
+}
