@@ -17,18 +17,18 @@ Makes use of the inotify API. It will recursively search for directories, starti
 mkdir dir
 ./inotify_r
 touch file
-mv file dir/file
+mv file dir
 rm dir/file
 ^C
 rmdir dir
 
 3.2 mem.c
 
-I was inspired to implement my own malloc. You can check the source code of 'mem.c', though I have not done thorough debugging. Together with 'mem.c', I have included some supplementary programmes. The first, 'vpage', is a test to see how virtual memory works. It increases the programme break by 20 bytes and tries to access up to 4098 bytes (page size). It then attempts to write to the 4099th byte and, hopefully, is signalled with SIGSEGV. The other. 'malloc_defrag_test', is a result of the big difference in performance of my implementation of malloc and the glibc one. I had a feeling it was because malloc did not perform memory defragmentation, i.e. grouped adjacent free memory blocks to construct a bigger one. It turns out I was wrong.
+I was inspired to implement my own malloc. You can check the source code of 'mem.c', though I have not done thorough debugging. I have included some supplementary programmes. The first, 'vpage', is a test to see how virtual memory works. It increases the programme break by 20 bytes and tries to access up to 4098 bytes (page size). It then attempts to write to the 4099th byte and, hopefully, is signalled with SIGSEGV. The other. 'malloc_defrag_test', is a result of the big difference in performance of my implementation of malloc and the glibc one. I had a feeling it was because malloc did not perform memory defragmentation, i.e. grouped adjacent free memory blocks to construct a bigger one. It turns out I was wrong.
 
 3.3 time
 
-A very simplistic programme that mirrors time(1). On the subject of time, I was interesting in the (Xorg) imlpementation of glfw's glfwGetTime(). I wrote the script 'glfwgettime.sh' (9 lines!) and was amazed how fast I found it. I decided to include it here just as an example of why I love Linux.
+A very simplistic programme that mirrors time(1). On the subject of time, I was interesting in the (x11) imlpementation of glfw's glfwGetTime(). I wrote the script 'glfwgettime.sh' (9 lines) and was amazed how fast I found it. I decided to include it here just as an example of why I love Linux.
 
 3.4 cond_var
 
