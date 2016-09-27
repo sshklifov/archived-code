@@ -36,11 +36,11 @@ int main ()
     //Break
     printf ("Accessing out-of-bounds address (4096th byte)\n");
     char* seg = (char*) p;
-    seg[4095] = 0xdeadbeef; // 4KiB page
+    seg[4095] = 0; // 4KiB page
     printf ("SIGSEGV not genereated!\n");
     
     printf ("Accessing 4097th byte (should generate SIGSEGV)\n");
-    seg[4096] = 0xdeadbeef; // rip
+    seg[4096] = 0; // rip
     printf ("Programme did not abort!?");
     
     return 0;
